@@ -4,7 +4,8 @@
 1. dotfilesをクローンする。
 
 ```
-git clone https://github.com/kavis777/dotfiles.```
+git clone https://github.com/kavis777/dotfiles.
+```
 
 2. ~/.bash_profileをdotfiles以下にコピーする。
 
