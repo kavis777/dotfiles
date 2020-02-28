@@ -28,7 +28,7 @@ ln -s ~/dotfiles/.bash_profile ~
 ```
 mkdir -p ~/Dropbox/application/iTerm2
 cp -rp ~/Library/Preferences/com.googlecode.iterm2.plist ~/Dropbox/application/iTerm2/com.googlecode.iterm2.plist
- ```
+```
 
 2. 既存の iTerm2 の設定を削除
 
