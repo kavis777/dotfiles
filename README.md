@@ -1,18 +1,18 @@
 # 現在の設定をdotfilesへの移行方法
 
-`~/.bash_profile`を置き換える場合の例
+~/.bash_profileを置き換える場合の例
 1. dotfilesをクローンする。
 
 ```
 git clone https://github.com/kavis777/dotfiles.```
 
-2. `~/.bash_profile`をdotfiles以下にコピーする。
+2. ~/.bash_profileをdotfiles以下にコピーする。
 
 ```
 mv ~/.bash_profile ~/dotfiles
 ```
 
-3. dotfilesの`.bash_profile`にシンボリックリンクを貼る。
+3. dotfilesの.bash_profileにシンボリックリンクを貼る。
 
 ```
 ln -s ~/dotfiles/.bash_profile ~
