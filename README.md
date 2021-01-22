@@ -1,10 +1,16 @@
-# 現在の設定をdotfilesへの移行方法
+## はじめに
 
-~/.bash_profileを置き換える場合の例
+セットアップは以下のリポジトリで行う。
+https://github.com/kavis777/mac-init-setup
+
+## 現在の設定をdotfilesへの移行するやり方（サンプル）
+
+以下の手順は、~/.bash_profileを置き換える場合の例です。
+
 1. dotfilesをクローンする。
 
 ```
-git clone https://github.com/kavis777/dotfiles.
+git clone https://github.com/kavis777/dotfiles.git
 ```
 
 2. ~/.bash_profileをdotfiles以下にコピーする。
