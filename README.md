@@ -79,17 +79,3 @@ sudo vi /etc/shells
 chsh -s /usr/local/bin/fish
 ```
 
-### 設定ファイルのコピー
-```
-ln -s ~/dotfiles/.config/ ~
-```
-
-### powerline/fontsのインストール
-
-```
-git clone https://github.com/powerline/fonts.git
-sh fonts/install.sh
-rm -rf fonts
-```
-
-インストール完了後に使用しているターミナルのフォントをpowerlineに変更する。
