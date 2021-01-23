@@ -34,5 +34,5 @@ function fish_prompt
 
     _prompt_dir
     _prompt_git
-    printf '\n > '
+    printf '%b' (set_color $white) '\n > '
 end
