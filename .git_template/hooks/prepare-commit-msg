@@ -2,7 +2,7 @@
 ## prepare-commit-msg
 
 branch=$(git branch | grep "*" | awk '{print $2}' | sed -e 's/\(-[0-9]*\)\(-.*\)*/\1/')
-perl -i.bak -ne "s/{branch}/$branch/g; print" "$1"
+perl -i.bak -pe "s/{branch}/$branch/g;" "$1"
 
-preCommit=$(git log -1 --pretty=format:"%s")
-perl -i.bak -ne "s/{pre-commit}/$preCommit/g; print" "$1"
+preCommit=$(git log -n 1 --pretty=format:"%s" | awk '$0 = substr($0, 1, 30)')
+perl -i.bak -pe "s/{pre-commit}/$preCommit/g;" "$1"
