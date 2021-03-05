@@ -1,0 +1,33 @@
+git checkout <ブランチ名>：ローカルでブランチを切り替え
+git checkout -b <ブランチ名>：ブランチ作成 & 切り替え
+git checkout <ブランチ名> origin/<ブランチ名>：リモートのブランチをローカル持ってくる & 切り替え
+
+git branch -m <新しいブランチ名>：現在のブランチを新しいブランチ名に変更
+git branch -d <ブランチ名>：ブランチの削除
+git branch -a：全てのブランチを確認する
+git merge <ブランチ名>：ブランチをマージする
+git diff <ブランチ名> <ブランチ名>：ブランチを比較する
+
+git clone <URL>：リモートからクローンする
+git pull <remote repository PATH> <branch>：リモートリポジトリの変更を取り込む
+git fetch <remote repository>：リモートリポジトリの最新情報を追加
+
+git add <ファイル名>：ファイルの登録（コミットするため）
+git commit：ファイルの変更や追加をコミット
+git commit --amend "新しいコミットメッセージ"：コミットメッセージの修正
+git reset HEAD^：commitの取り消し
+
+git restore .：ファイルの変更を取り消し
+
+git stash save：変更点を一旦退避させる
+git stash list：退避した作業の一覧を見る
+git stash apply <stash名>：退避した作業を戻す
+git stash drop <stash名>：退避した作業を消す
+
+
+git push origin <ブランチ名>：リモートにプッシュ
+git status：ローカルの変更を確認する
+git diff <ファイル名>：リモートとローカルのファイルの差分を抽出する
+git log：commitの変更履歴をみる
+git show <コミットのハッシュ値>：指定したcommitの変更点を見る
+
