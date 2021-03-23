@@ -1,5 +1,15 @@
 filetype plugin on
 
+" PLUGIN SETTINGS
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()
+
 " ノーマルモードでマウス操作
 :set mouse=n
 
