@@ -30,12 +30,12 @@ set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set nocompatible
 runtime macros/matchit.vim
 
-" PLUGIN SETTINGS
-call plug#begin('~/.config/nvim/plugged')
-
-Plug 'tpope/vim-surround'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-call plug#end()
+" fzfの設定
+let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
+let mapleader = "\<Space>"
+noremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>g :GFiles<CR>
+nnoremap <silent> <leader>G :GFiles?<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>h :History<CR>
 
