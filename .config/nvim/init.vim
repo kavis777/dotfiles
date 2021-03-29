@@ -56,3 +56,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" 常にインサートモードでTerminalを開く
+autocmd TermOpen * startinsert
+
+" Terminalのインサートモードからの離脱をescキーにマッピング
+:tnoremap <Esc> <C-\><C-n>
+
+" TerminalをVSCodeのように現在のウィンドウの下に開く
+command! -nargs=* T split | wincmd j | resize 20 | terminal <args>
