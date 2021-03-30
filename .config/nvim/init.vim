@@ -86,5 +86,5 @@ autocmd TermOpen * startinsert
 command! -nargs=* T split | wincmd j | resize 20 | terminal <args>
 
 " Prittierコマンドを実行
-command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
