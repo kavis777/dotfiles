@@ -15,15 +15,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " TypeScriptのためのシンタックスハイライト
-Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+
+" JSX/TSXのためのシンタックスハイライト
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'leafgarland/typescript-vim'
 
 " テーマカラー設定
 Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+" テーマの設定
 syntax enable
 set background=dark
 colorscheme gruvbox
