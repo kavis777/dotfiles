@@ -3,13 +3,30 @@ filetype plugin on
 " PLUGIN SETTINGS
 call plug#begin('~/.config/nvim/plugged')
 
+" 囲い（surround）を編集する際に役立つプラグイン
 Plug 'tpope/vim-surround'
+
+" あいまい検索ができるプラグイン
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Language Server Protocol
+" プログラムのプロジェクト ソースを解析して情報を提供するプラグイン
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" TypeScriptのためのシンタックスハイライト
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 
+" テーマカラー設定
+Plug 'morhetz/gruvbox'
+
 call plug#end()
+
+syntax enable
+set background=dark
+colorscheme gruvbox
 
 " ノーマルモードでマウス操作
 :set mouse=n
