@@ -84,3 +84,7 @@ autocmd TermOpen * startinsert
 
 " TerminalをVSCodeのように現在のウィンドウの下に開く
 command! -nargs=* T split | wincmd j | resize 20 | terminal <args>
+
+" Prittierコマンドを実行
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
