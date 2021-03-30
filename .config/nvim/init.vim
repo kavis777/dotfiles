@@ -26,12 +26,22 @@ Plug 'morhetz/gruvbox'
 " Gitの追加/削除/変更された行を行番号の左に表示
 Plug 'airblade/vim-gitgutter'
 
+" ステータスバーをいい感じにカスタマイズできるプラグイン
+Plug 'vim-airline/vim-airline'
+
 call plug#end()
 
 " テーマの設定
 syntax enable
 set background=dark
 colorscheme gruvbox
+
+" ステータスバーの設定
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " ノーマルモードでマウス操作
 :set mouse=n
