@@ -23,6 +23,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 " テーマカラー設定
 Plug 'morhetz/gruvbox'
 
+" Gitの追加/削除/変更された行を行番号の左に表示
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 " テーマの設定
