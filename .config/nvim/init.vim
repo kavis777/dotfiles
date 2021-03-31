@@ -44,11 +44,19 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " ノーマルモードでマウス操作
-:set mouse=n
+set mouse=n
 
 " 上下の移動
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
+set ignorecase " 検索パターンに大文字小文字を区別しない
+set smartcase " 検索パターンに大文字を含んでいたら大文字小文字を区別する
+set hlsearch " 検索結果をハイライト
+
+" ESCキー2度押しでハイライトの切り替え
+nnoremap <silent> <Esc><Esc> :noh<CR>
 
 " バッファの移動
 nnoremap <silent> [b :bprevious<CR>
@@ -68,6 +76,7 @@ set tabstop=2          "タブを何文字の空白に変換するか
 set shiftwidth=2       "自動インデント時に入力する空白の数
 set expandtab          "タブ入力を空白に変換
 set clipboard=unnamed  "yank した文字列をクリップボードにコピー
+set history=5000 " 保存するコマンド履歴の数
 
 " 対となるキーワード間の移動
 set nocompatible
@@ -76,7 +85,7 @@ runtime macros/matchit.vim
 " fzfの設定
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
 let mapleader = "\<Space>"
-noremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>g :GFiles<CR>
 nnoremap <silent> <leader>G :GFiles?<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
