@@ -81,12 +81,11 @@ runtime macros/matchit.vim
 
 " fzfの設定
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
-let mapleader = "\<Space>"
-nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <leader>g :GFiles<CR>
-nnoremap <silent> <leader>G :GFiles?<CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>h :History<CR>
+nnoremap <silent> <Space>f :Files<CR>
+nnoremap <silent> <Space>b :GFiles<CR>
+nnoremap <silent> <Space>G :GFiles?<CR>
+nnoremap <silent> <Space>b :Buffers<CR>
+nnoremap <silent> <Space>h :history<cr>
 
 " cocの設定
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
