@@ -67,9 +67,6 @@ nnoremap <silent> ]B :blast<CR>
 " アクティブアクティブなファイルが含まれているディレクトリを手早く展開
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" pathの設定
-:set path+=app/**
-
 set number             "行番号を表示
 set autoindent         "改行時に自動でインデントする
 set tabstop=2          "タブを何文字の空白に変換するか
