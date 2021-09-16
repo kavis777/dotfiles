@@ -1,0 +1,13 @@
+[core]
+	excludesfile = ~/.gitignore_global
+  #hooksPath = /Users/yusuke/dotfiles/.git_template/hooks
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[user]
+	name = kavis777
+	email =　wwrd0129@gmail.com
+[commit]
+  #template = ~/dotfiles/.git_template/.commit_template
+[ghq]
+	root = ~/projects
