@@ -1,0 +1,10 @@
+*~
+.DS_Store
+.idea
+*.log
+log
+frontend/node_modules
+.ruby-version
+.node-version
+.vscode
+.tags
