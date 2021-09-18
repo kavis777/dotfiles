@@ -1,6 +1,5 @@
 # homebrewの設定
-set BREW_DIR (which brew)
-status --is-interactive; and source ($BREW_DIR shellenv|psub)
+status --is-interactive; and source (/opt/homebrew/bin/brew shellenv|psub)
 
 # nodenvの設定
 status --is-interactive; and source (nodenv init -|psub)
