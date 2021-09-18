@@ -6,7 +6,7 @@
 	path = 
 [user]
 	name = kavis777
-	email =　wwrd0129@gmail.com
+	email = wwrd0129@gmail.com
 [commit]
   #template = ~/dotfiles/.git_template/.commit_template
 [ghq]
