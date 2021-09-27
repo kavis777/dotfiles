@@ -8,5 +8,5 @@ status --is-interactive; and source (nodenv init -|psub)
 status --is-interactive; and source (rbenv init -|psub)
 
 # yvmの設定
-set -x YVM_DIR 〜/.yvm
+set -x YVM_DIR $HOME/.yvm
 [ -r $YVM_DIR/yvm.fish ]; and source $YVM_DIR/yvm.fish
