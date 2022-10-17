@@ -4,6 +4,9 @@ setopt IGNOREEOF
 # 日本語を使用
 export LANG=ja_JP.UTF-8
 
+# 複数タブ / 複数ウィンドウでコマンド履歴を共有
+setopt share_history
+
 ###### プロンプトの設定
 autoload -Uz promptinit
 promptinit
@@ -37,3 +40,5 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
+# rbenv有効化
+eval "$(rbenv init - zsh)"
