@@ -41,6 +41,7 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # fzfの設定
 [ -f ~/dotfiles/zsh/fzf/.fzf.zsh ] && source ~/dotfiles/zsh/fzf/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_CTRL_T_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 # asdfの有効化
