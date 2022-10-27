@@ -20,6 +20,9 @@ zstyle ':completion:*:*:git:*' script ~/dotfiles/zsh/git-completion.bash
 autoload -Uz compinit
 compinit
 
+# ghq-fzfの読み込み
+source ~/dotfiles/zsh/fzf/ghq-fzf.zsh
+
 # プロンプトのオプション表示設定
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -42,4 +45,3 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 # asdfの有効化
 . $(brew --prefix asdf)/libexec/asdf.sh
-
