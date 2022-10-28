@@ -1,6 +1,5 @@
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = code --wait
   #hooksPath = /Users/yusuke/dotfiles/.git_template/hooks
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -13,7 +12,14 @@
 [ghq]
 	root = ~/projects
 [alias]
-	ci = commit
+	co = commit
 	st = status
 	br = branch
-	co = checkout
+	rt = restore
+	sw = switch
+	re = reset
+	me = merge
+[merge]
+	ff = false
+[branch "master"]
+	rebase = true
