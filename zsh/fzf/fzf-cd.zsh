@@ -1,5 +1,5 @@
 #
-# ghq-fzf.zsh
+# fzf-cd.zsh
 #
 # ABOUT:
 #   `cd` to `ghq` repositories directory on `zsh`
@@ -11,13 +11,13 @@
 #   or copy & paste to your `~/.zshrc`
 # 
 
-function _fzf_cd_ghq() {
-    local dir="$(ghq root)/$(ghq list | fzf)"
-    [ -n "${dir}" ] && cd "${dir}"
+function _fzf_cd() {
+    local destination="$(echo "$(ghq list --full-path)\n$(echo $HOME)/dotfiles" | fzf)"
+    [ -n "${destination}" ] && cd "${destination}"
     zle accept-line
     zle reset-prompt
 }
 
-zle -N _fzf_cd_ghq
-bindkey "^g" _fzf_cd_ghq
+zle -N _fzf_cd
+bindkey "^g" _fzf_cd
 

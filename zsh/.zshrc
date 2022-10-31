@@ -21,7 +21,7 @@ autoload -Uz compinit
 compinit
 
 # ghq-fzfの読み込み
-source ~/dotfiles/zsh/fzf/ghq-fzf.zsh
+source ~/dotfiles/zsh/fzf/fzf-cd.zsh
 
 # プロンプトのオプション表示設定
 GIT_PS1_SHOWDIRTYSTATE=true
