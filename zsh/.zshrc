@@ -46,3 +46,8 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 # asdfの有効化
 . $(brew --prefix asdf)/libexec/asdf.sh
+
+# Vimコマンドのエイリアス
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
