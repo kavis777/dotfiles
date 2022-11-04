@@ -4,6 +4,10 @@ setopt IGNOREEOF
 # 日本語を使用
 export LANG=ja_JP.UTF-8
 
+# コマンド履歴の設定
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
 # 複数タブ / 複数ウィンドウでコマンド履歴を共有
 setopt share_history
 
