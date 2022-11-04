@@ -1,8 +1,5 @@
 {branch} 
 
-# ==== 前回のコミット ====
-# {pre-commit}
-
 # ==== Prefix ====
 # feat: 新しい機能
 # fix: バグの修正
