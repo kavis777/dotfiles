@@ -1,6 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
         hooksPath = ~/dotfiles/git/hooks
+	editor = nvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
