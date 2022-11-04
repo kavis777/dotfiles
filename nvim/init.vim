@@ -7,8 +7,8 @@ set clipboard=unnamed
 call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " キーマッピング
 "nnoremap <C-v> :NERDTreeToggle<CR>
-
