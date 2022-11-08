@@ -24,7 +24,7 @@ zstyle ':completion:*:*:git:*' script ~/dotfiles/zsh/git-completion.bash
 autoload -Uz compinit
 compinit
 
-# ghq-fzfの読み込み
+# fzf-cdの読み込み
 source ~/dotfiles/zsh/fzf/fzf-cd.zsh
 
 # プロンプトのオプション表示設定
