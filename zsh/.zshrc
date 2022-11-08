@@ -51,6 +51,9 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 # asdfの有効化
 . $(brew --prefix asdf)/libexec/asdf.sh
 
+# sheldonの有効化
+eval "$(sheldon source)"
+
 # Vimコマンドのエイリアス
 alias vi="nvim"
 alias vim="nvim"
