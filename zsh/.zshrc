@@ -24,9 +24,6 @@ zstyle ':completion:*:*:git:*' script ~/dotfiles/zsh/git-completion.bash
 autoload -Uz compinit
 compinit
 
-# fzf-cdの読み込み
-source ~/dotfiles/zsh/fzf/fzf-cd.zsh
-
 # プロンプトのオプション表示設定
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -38,18 +35,14 @@ setopt PROMPT_SUBST ; PS1='%F{cyan}%~%f %F{green}$(__git_ps1)%f${NEWLINE}$ '
 
 ### -------------- ### 
 
-# プラグイン有効化
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # fzfの設定
 [ -f ~/dotfiles/zsh/fzf/.fzf.zsh ] && source ~/dotfiles/zsh/fzf/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_CTRL_T_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
-# asdfの有効化
-. $(brew --prefix asdf)/libexec/asdf.sh
+# fzf-cdの読み込み
+source ~/dotfiles/zsh/fzf/fzf-cd.zsh
 
 # sheldonの有効化
 eval "$(sheldon source)"

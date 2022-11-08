@@ -18,3 +18,15 @@ shell = "zsh"
 #
 # [plugins.base16]
 # github = "chriskempson/base16-shell"
+
+# ターミナルでコマンドをハイライトする
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+
+# ターミナルのコマンド履歴に基づいてコマンド候補を表示/入力補完する
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+# ツールやプログラミング言語のバージョン管理ツール
+[plugins.asdf]
+github = "asdf-vm/asdf"
