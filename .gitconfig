@@ -24,3 +24,5 @@
 	ff = false
 [branch "master"]
 	rebase = true
+[pull]
+	ff = only
