@@ -11,6 +11,15 @@ export SAVEHIST=1000000
 # 複数タブ / 複数ウィンドウでコマンド履歴を共有
 setopt share_history
 
+# 前と重複する行は記録しない
+setopt HIST_IGNORE_DUPS
+# 履歴中の重複行をファイル記録前に無くす
+setopt HIST_IGNORE_ALL_DUPS
+# 行頭がスペースのコマンドは記録しない
+setopt HIST_IGNORE_SPACE
+# 余分な空白は詰めて記録
+setopt HIST_REDUCE_BLANKS
+
 ###### プロンプトの設定
 autoload -Uz promptinit
 promptinit
