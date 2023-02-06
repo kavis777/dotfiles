@@ -12,3 +12,6 @@ call plug#end()
 
 " キーマッピング
 "nnoremap <C-v> :NERDTreeToggle<CR>
+
+" 自動改行しないように設定
+set textwidth=0
