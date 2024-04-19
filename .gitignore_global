@@ -6,3 +6,4 @@ log
 frontend/node_modules
 .vscode
 .tags
+next-env.d.ts
