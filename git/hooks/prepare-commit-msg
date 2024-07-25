@@ -1,5 +1,6 @@
 #!/bin/sh
 ## prepare-commit-msg
 
-branch=$(git rev-parse --abbrev-ref HEAD | sed -e 's/\(-[0-9]*\)\(-.*\)*/\1/')
-perl -i.bak -pe "s/{branch}/$branch/g;" "$1"
+branch_name=$(git rev-parse --abbrev-ref HEAD | sed -e 's/\(-[0-9]*\)\(-.*\)*/\1/')
+commit_message=$(cat "$1")
+echo "$branch_name $commit_message" > "$1"
