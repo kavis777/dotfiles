@@ -18,6 +18,8 @@
 	br = branch
 	rt = restore
 	sw = switch
+	swc = switch -c
+	swt = "!f() { git switch --track origin/$1; }; f"
 	re = reset
 	me = merge
 [merge]

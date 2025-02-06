@@ -1,6 +1,6 @@
-git checkout <ブランチ名>：ローカルでブランチを切り替え
-git checkout -b <ブランチ名>：ブランチ作成 & 切り替え
-git checkout <ブランチ名> origin/<ブランチ名>：リモートのブランチをローカル持ってくる & 切り替え
+git switch <ブランチ名>：ローカルでブランチを切り替え
+git switch -c <ブランチ名>：ブランチ作成 & 切り替え
+git switch --track origin/<ブランチ名>：リモートのブランチをローカルに持ってくる & 切り替え
 
 git branch -m <新しいブランチ名>：現在のブランチを新しいブランチ名に変更
 git branch -d <ブランチ名>：ブランチの削除
