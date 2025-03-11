@@ -17,7 +17,7 @@
 	st = status
 	br = branch
 	rt = restore
-	sw = switch  --force-create
+	sw = switch
 	swt = "!f() { git switch --track origin/$1; }; f"
 	re = reset
 	me = merge
