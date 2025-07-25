@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# 引数の取得
+before_head=$1
+after_head=$2
+checkout_type=$3
+
+# 実行されたGitコマンドを取得
+git_command=$(ps -ocommand= -p $PPID)
+
+# 新規ブランチ作成時の判定
+if [[ $git_command =~ git[[:space:]]+switch ]] && [[ $git_command =~ ([[:space:]]\-c[[:space:]]) ]] && [ "$before_head" = "$after_head" ] && [ "$checkout_type" = "1" ]; then
+  git commit --allow-empty -m "chore: first commit"
+fi
+
+exit 0
