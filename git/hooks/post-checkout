@@ -8,8 +8,22 @@ checkout_type=$3
 # 実行されたGitコマンドを取得
 git_command=$(ps -ocommand= -p $PPID)
 
-# 新規ブランチ作成時の判定
-if [[ $git_command =~ git[[:space:]]+switch ]] && [[ $git_command =~ ([[:space:]]\-c[[:space:]]) ]] && [ "$before_head" = "$after_head" ] && [ "$checkout_type" = "1" ]; then
+# デバッグ用: フック発火時のコマンド確認（必要ならコメントアウトを外す）
+# echo "Triggered by: $git_command" >> /tmp/git_post_checkout_log.txt
+
+# 条件1: 新しいブランチを作成したケース（switch -c / checkout -b）
+if ([[ $git_command =~ git[[:space:]]+switch ]] && [[ $git_command =~ ([[:space:]]\-c[[:space:]]) ]]) \
+  || ([[ $git_command =~ git[[:space:]]+checkout ]] && [[ $git_command =~ ([[:space:]]\-b[[:space:]]) ]]); then
+
+  if [ "$before_head" = "$after_head" ] && [ "$checkout_type" = "1" ]; then
+    git commit --allow-empty -m "chore: first commit"
+  fi
+fi
+
+# 条件2: worktree add によるブランチ作成
+if [[ $git_command =~ git[[:space:]]+worktree ]] && [[ $git_command =~ ([[:space:]]add[[:space:]]) ]]; then
+  # worktree add は通常 post-checkout 内では発火しないが、
+  # 万一発火した場合も同様に空コミットを作る
   git commit --allow-empty -m "chore: first commit"
 fi
 
