@@ -12,7 +12,10 @@ git_command=$(ps -ocommand= -p $PPID)
 # echo "Triggered by: $git_command" >> /tmp/git_post_checkout_log.txt
 
 # ブランチ作成元（ベースブランチ）を推定
-base_branch=$(git name-rev --name-only $before_head 2>/dev/null || echo "master")
+base_branch=$(git symbolic-ref --short HEAD@{1} 2>/dev/null)
+if [ -z "$base_branch" ] || [ "$base_branch" = "undefined" ]; then
+  base_branch="master"
+fi
 
 # 条件1: 新しいブランチを作成したケース（switch -c / checkout -b）
 if ([[ $git_command =~ git[[:space:]]+switch ]] && [[ $git_command =~ ([[:space:]]\-c[[:space:]]) ]]) \
@@ -42,7 +45,6 @@ fi
 if [[ $git_command =~ git[[:space:]]+worktree ]] && [[ $git_command =~ ([[:space:]]add[[:space:]]) ]]; then
   git commit --allow-empty -m "chore: first commit"
   branch=$(git symbolic-ref --short HEAD)
-  base_branch=$(git name-rev --name-only $before_head 2>/dev/null || echo "master")
   git push -u origin "$branch"
   gh pr create --base "$base_branch" --head "$branch" --title "$branch" --body "Initial draft PR created automatically from $base_branch." --draft
 fi
