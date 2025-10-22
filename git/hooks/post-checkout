@@ -12,10 +12,12 @@ git_command=$(ps -ocommand= -p $PPID)
 # echo "Triggered by: $git_command" >> /tmp/git_post_checkout_log.txt
 
 # ブランチ作成元（ベースブランチ）を推定
-base_branch=$(git symbolic-ref --short HEAD@{1} 2>/dev/null)
-if [ -z "$base_branch" ] || [ "$base_branch" = "undefined" ]; then
+base_branch=$(git rev-parse --abbrev-ref @{-1} 2>/dev/null)
+# 空だった場合は master にフォールバック
+if [ -z "$base_branch" ]; then
   base_branch="master"
 fi
+echo "Base branch is: $base_branch"
 
 # 条件1: 新しいブランチを作成したケース（switch -c / checkout -b）
 if ([[ $git_command =~ git[[:space:]]+switch ]] && [[ $git_command =~ ([[:space:]]\-c[[:space:]]) ]]) \
