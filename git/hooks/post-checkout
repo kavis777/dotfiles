@@ -19,36 +19,42 @@ if [ -z "$base_branch" ]; then
 fi
 echo "Base branch is: $base_branch"
 
+# 共通処理: 初回コミット、push、PR作成
+create_branch_and_pr() {
+  # 空コミットを作成
+  git commit --allow-empty -m "chore: first commit"
+
+  # 現在のブランチ名を取得
+  branch=$(git symbolic-ref --short HEAD)
+  
+  # タイトル用のブランチ名（枝番を除去）
+  branch_prefix=$(echo "$branch" | awk -F'-' '{print $1"-"$2}')
+  title="$branch_prefix タイトル"
+
+  # リモートにpush
+  git push -u origin "$branch"
+
+  # Draft PRを自動作成（GitHub CLIを使用）
+  gh pr create \
+    --base "$base_branch" \
+    --head "$branch" \
+    --title "$title" \
+    --body "Initial draft PR created automatically from $base_branch." \
+    --draft
+}
+
 # 条件1: 新しいブランチを作成したケース（switch -c / checkout -b）
 if ([[ $git_command =~ git[[:space:]]+switch ]] && [[ $git_command =~ ([[:space:]]\-c[[:space:]]) ]]) \
   || ([[ $git_command =~ git[[:space:]]+checkout ]] && [[ $git_command =~ ([[:space:]]\-b[[:space:]]) ]]); then
 
   if [ "$before_head" = "$after_head" ] && [ "$checkout_type" = "1" ]; then
-    # 空コミットを作成
-    git commit --allow-empty -m "chore: first commit"
-
-    # 現在のブランチ名を取得
-    branch=$(git symbolic-ref --short HEAD)
-
-    # リモートにpush
-    git push -u origin "$branch"
-
-    # Draft PRを自動作成（GitHub CLIを使用）
-    gh pr create \
-      --base "$base_branch" \
-      --head "$branch" \
-      --title "$branch" \
-      --body "Initial draft PR created automatically from $base_branch." \
-      --draft
+    create_branch_and_pr
   fi
 fi
 
 # 条件2: worktree add によるブランチ作成
 if [[ $git_command =~ git[[:space:]]+worktree ]] && [[ $git_command =~ ([[:space:]]add[[:space:]]) ]]; then
-  git commit --allow-empty -m "chore: first commit"
-  branch=$(git symbolic-ref --short HEAD)
-  git push -u origin "$branch"
-  gh pr create --base "$base_branch" --head "$branch" --title "$branch" --body "Initial draft PR created automatically from $base_branch." --draft
+  create_branch_and_pr
 fi
 
 exit 0
