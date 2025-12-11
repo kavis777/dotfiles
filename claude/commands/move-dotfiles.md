@@ -11,7 +11,7 @@ $ARGUMENTS で受け取ったファイルやディレクトリを ~/dotfiles 配
    mv ~/.bash_profile ~/dotfiles/
 
 2. 元の場所にシンボリックリンクを作成する
-   ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+   ln -s ~/dotfiles/.bash_profile ~/
 
 3. 変更内容をコミットする（push はしない）
 
