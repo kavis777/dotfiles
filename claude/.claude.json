@@ -1,0 +1,267 @@
+{
+  "installMethod": "unknown",
+  "autoUpdates": true,
+  "tipsHistory": {
+    "plan-mode-for-complex-tasks": 0
+  },
+  "userID": "ad1f503fdba7c0e4c151440c838fb652c5ff646110fe2c5e23339b68c381af0f",
+  "projects": {
+    "/Users/kawabe/projects/busportal-navi-front": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastTotalWebSearchRequests": 0,
+      "exampleFiles": [
+        "Search.tsx",
+        "api.ts",
+        "search.ts",
+        "BookingIndex.tsx",
+        "middleware.ts"
+      ],
+      "exampleFilesGeneratedAt": 1765437000248,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.005326,
+      "lastAPIDuration": 4418,
+      "lastToolDuration": 0,
+      "lastDuration": 6630,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 3526,
+      "lastTotalOutputTokens": 360,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "a9b45f28-2128-42a7-a26b-7c0bf990c691"
+    },
+    "/Users/kawabe/projects/goal-setting": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "目標①.md",
+        "目標②.md",
+        "1on1.md",
+        "等級定義に基づく行動評価.md",
+        "目標X.md"
+      ],
+      "exampleFilesGeneratedAt": 1758876345462
+    },
+    "/Users/kawabe/projects": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "hasCompletedProjectOnboarding": true,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 10.335668449999995,
+      "lastAPIDuration": 1940993,
+      "lastToolDuration": 33462,
+      "lastDuration": 1135160332,
+      "lastLinesAdded": 1130,
+      "lastLinesRemoved": 492,
+      "lastTotalInputTokens": 26244,
+      "lastTotalOutputTokens": 99113,
+      "lastTotalCacheCreationInputTokens": 1011679,
+      "lastTotalCacheReadInputTokens": 16839024,
+      "lastSessionId": "633cac38-ff71-45e7-9868-3f9ea0b6a296"
+    },
+    "/Users/kawabe/projects/bus-job": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "highwaybus_base_parser.rb",
+        "highwaybus_fees_service.rb",
+        "jbo_create_bus.rb",
+        "kosoku_source.rb",
+        "hasha_source.rb"
+      ],
+      "exampleFilesGeneratedAt": 1761636231110,
+      "lastCost": 0.2052377,
+      "lastAPIDuration": 60267,
+      "lastToolDuration": 24497,
+      "lastDuration": 295713,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 6226,
+      "lastTotalOutputTokens": 1997,
+      "lastTotalCacheCreationInputTokens": 31680,
+      "lastTotalCacheReadInputTokens": 183971,
+      "lastTotalWebSearchRequests": 0,
+      "lastSessionId": "29dbc352-0408-4707-ad46-6206b4907adf"
+    },
+    "/Users/kawabe/projects/bus-man": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "bus_controller.rb",
+        "kogyo_sub.rb",
+        "tour.rb",
+        "show.rb",
+        "survey_api_controller.rb"
+      ],
+      "exampleFilesGeneratedAt": 1761637216317
+    },
+    "/Users/kawabe/projects/busportal-navi": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "search.js",
+        "_search_bus_result_simple.html.erb",
+        "SearchQuestionAnswer.tsx",
+        "BustourPrefList.tsx",
+        "_top.scss"
+      ],
+      "exampleFilesGeneratedAt": 1765428277334,
+      "hasCompletedProjectOnboarding": true,
+      "lastTotalWebSearchRequests": 0
+    },
+    "/Users/kawabe/projects/bus-reservation": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "users_controller.rb",
+        "sessions_controller.rb",
+        "page.tsx",
+        "user.rb",
+        "registrations_controller.rb"
+      ],
+      "exampleFilesGeneratedAt": 1763441112010,
+      "hasCompletedProjectOnboarding": true
+    },
+    "/Users/kawabe/projects/bless": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {
+        "playwright": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "@playwright/mcp@latest"
+          ],
+          "env": {}
+        }
+      },
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "app.py",
+        "ProfileEdit.vue",
+        "const.py",
+        "Find.vue",
+        "personlib.py"
+      ],
+      "exampleFilesGeneratedAt": 1765214104029,
+      "lastTotalWebSearchRequests": 0
+    },
+    "/Users/kawabe/projects/navi-test": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "Search.tsx",
+        "api.ts",
+        "search.ts",
+        "middleware.ts",
+        "SearchSideForm.tsx"
+      ],
+      "exampleFilesGeneratedAt": 1764834209923,
+      "hasCompletedProjectOnboarding": true,
+      "lastTotalWebSearchRequests": 0
+    },
+    "/Users/kawabe/obsidian-vault": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "20 Atomic template.md",
+        "10 Inbox template.md",
+        "guide.md",
+        "aaa.md",
+        "タグ一覧.md"
+      ],
+      "exampleFilesGeneratedAt": 1765044276796,
+      "lastTotalWebSearchRequests": 0
+    },
+    "/Users/kawabe/dotfiles": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        ".zshrc",
+        ".gitconfig",
+        "config.fish",
+        ".tmux.conf",
+        "init.vim"
+      ],
+      "exampleFilesGeneratedAt": 1765437224804,
+      "lastTotalWebSearchRequests": 0
+    }
+  }
+}
