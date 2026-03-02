@@ -1,4 +1,8 @@
-- # PR Descriptionを更新
+---
+description: PR Descriptionを自動生成して更新する
+---
+
+# PR Descriptionを更新
 
 PR #$ARGUMENTS のDescriptionを以下の形式で自動生成して更新してください。
 `#$ARGUMENTS` が未指定の場合は現在のブランチのPRが存在するかを確認してください。
