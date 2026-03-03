@@ -4,8 +4,3 @@
 .netrwhist
 configstore
 .zshrc.swp
-
-# claude-config の共有スキル（シンボリックリンク）
-claude/skills/pr-description
-claude/skills/implement-youtrack
-claude/skills/create-youtrack-issue
