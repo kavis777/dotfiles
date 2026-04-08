@@ -31,6 +31,9 @@ vim.opt.textwidth = 0
 -- クリップボード
 vim.opt.clipboard = "unnamed"
 
+-- Ctrl-Cでもinsertleaveイベントを発火させる
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
 -- lazy.nvim ブートストラップ
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
@@ -59,6 +62,19 @@ require("lazy").setup({
       -- Cursorと同じカーソル行ハイライト
       vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1a2a3a" })
       vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#c6c6c6", bold = true })
+    end,
+  },
+
+  -- ノーマルモードでIMEを英字に自動切替
+  {
+    "keaising/im-select.nvim",
+    config = function()
+      require("im_select").setup({
+        default_im_select = "com.apple.keylayout.ABC",
+        default_command = "im-select",
+        set_default_events = { "VimEnter", "FocusGained", "InsertLeave", "CmdlineLeave" },
+        set_previous_events = {},
+      })
     end,
   },
 
