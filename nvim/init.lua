@@ -78,6 +78,26 @@ require("lazy").setup({
     end,
   },
 
+  -- ファジーファインダー
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      { "<leader>ff", "<cmd>Telescope find_files<cr>" },
+      { "<leader>fg", "<cmd>Telescope live_grep<cr>" },
+      { "<leader>fb", "<cmd>Telescope buffers<cr>" },
+    },
+  },
+
+  -- ファイラー
+  {
+    "stevearc/oil.nvim",
+    keys = {
+      { "-", "<cmd>Oil<cr>" },
+    },
+    opts = {},
+  },
+
   -- シンタックスハイライト強化
   {
     "nvim-treesitter/nvim-treesitter",
