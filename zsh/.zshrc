@@ -73,3 +73,5 @@ if [[ $(pwd) == */idou* ]]; then
     source "$HOME/.nvm_auto_load.zsh"
   fi
 fi
+
+. "$HOME/.local/bin/env"

@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /Users/kawabe/.asdf/shims/node /Users/kawabe/ai-memory/hooks/weekly-consolidate.js

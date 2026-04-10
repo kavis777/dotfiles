@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /Users/kawabe/.local/bin/uv run --with claude-monitor python3 /Users/kawabe/dotfiles/scripts/claude-usage-alert.py
