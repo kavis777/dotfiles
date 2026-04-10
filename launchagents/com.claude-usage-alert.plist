@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.claude-usage-alert</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/kawabe/dotfiles/scripts/claude-usage-alert</string>
+	</array>
+	<key>StartInterval</key>
+	<integer>120</integer>
+	<key>StandardOutPath</key>
+	<string>/tmp/claude-usage-alert.log</string>
+	<key>StandardErrorPath</key>
+	<string>/tmp/claude-usage-alert.log</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/Users/kawabe/.local/bin:/usr/local/bin:/usr/bin:/bin</string>
+		<key>HOME</key>
+		<string>/Users/kawabe</string>
+	</dict>
+</dict>
+</plist>
