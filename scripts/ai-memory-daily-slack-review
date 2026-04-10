@@ -1,2 +1,0 @@
-#!/bin/bash
-exec /bin/bash /Users/kawabe/ai-memory/hooks/daily-slack-review.sh
