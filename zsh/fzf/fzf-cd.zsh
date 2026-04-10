@@ -12,7 +12,11 @@
 # 
 
 function _fzf_cd() {
-    local destination="$(echo "$(ghq list --full-path)\n$(echo $HOME)/dotfiles" | fzf)"
+    local ghq_repos="$(ghq list --full-path)"
+    local home_repos="$(find $HOME -maxdepth 1 -type d -exec test -d {}/.git \; -print 2>/dev/null | while read dir; do
+        git -C "$dir" remote -v 2>/dev/null | grep -q github.com && echo "$dir"
+    done)"
+    local destination="$(echo "${ghq_repos}\n${home_repos}" | sort -u | fzf --delimiter='/' --with-nth=-1)"
     [ -n "${destination}" ] && cd "${destination}"
     zle accept-line
     zle reset-prompt
