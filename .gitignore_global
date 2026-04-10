@@ -8,3 +8,4 @@ frontend/node_modules
 .tags
 next-env.d.ts
 .claude
+service-account.json
