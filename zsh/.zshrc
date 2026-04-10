@@ -65,13 +65,4 @@ alias vim="nvim"
 alias view="nvim -R"
 
 
-# nvmの読み込み（idouディレクトリのみ）
-# 読み込ませるためにはターミナルの再起動が必要
-if [[ $(pwd) == */idou* ]]; then
-  source $(brew --prefix nvm)/nvm.sh
-  if [ -f "$HOME/.nvm_auto_load.zsh" ]; then
-    source "$HOME/.nvm_auto_load.zsh"
-  fi
-fi
-
 . "$HOME/.local/bin/env"
