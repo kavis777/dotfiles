@@ -28,11 +28,11 @@ autoload -Uz promptinit
 promptinit
 
 # git-promptの読み込み
-source /opt/homebrew/opt/git/etc/bash_completion.d/git-prompt.sh
+source ~/dotfiles/zsh/git-prompt.sh
 
 # git-completionの読み込み
-fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
-zstyle ':completion:*:*:git:*' script /opt/homebrew/opt/git/etc/bash_completion.d/git-completion.bash
+fpath=(~/dotfiles/zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/dotfiles/zsh/git-completion.bash
 autoload -Uz compinit
 compinit
 
