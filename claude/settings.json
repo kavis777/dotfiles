@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch"
+    ]
+  },
+  "hooks": {
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ~/ai-memory/hooks/session-end-extract.js",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+  "skipAutoPermissionPrompt": true,
+  "model": "claude-opus-4-6"
+}
