@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)"
+    ]
+  },
+  "mcpServers": {
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "<Slack Bot User OAuth Token>",
+        "SLACK_TEAM_ID": "T0K9M4E0Z"
+      }
+    },
+    "kibela": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--platform", "linux/amd64",
+        "-e", "KIBELA_ORIGIN",
+        "-e", "KIBELA_ACCESS_TOKEN",
+        "ghcr.io/kibela/kibela-mcp-server"
+      ],
+      "env": {
+        "KIBELA_ORIGIN": "https://lclco.kibe.la",
+        "KIBELA_ACCESS_TOKEN": "<Kibela Personal Access Token>"
+      }
+    }
+  }
+}
