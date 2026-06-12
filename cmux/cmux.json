@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux-settings.schema.json",
+  "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux.schema.json",
   "schemaVersion": 1,
 
   // This file uses JSON with comments (JSONC).
@@ -8,31 +8,19 @@
   // cmux creates this template on launch when both settings file locations are missing.
   // ~/.config/cmux/settings.json takes precedence over the Application Support fallback.
 
-  //   "app" : {
-  //     "appearance" : "system",
-  //     "appIcon" : "automatic",
-  //     "commandPaletteSearchesAllSurfaces" : false,
-  //     "focusPaneOnFirstClick" : false,
-  //     "keepWorkspaceOpenWhenClosingLastSurface" : false,
-  //     "language" : "system",
-  //     "minimalMode" : false,
-  //     "newWorkspacePlacement" : "afterCurrent",
-  //     "preferredEditor" : "",
-  //     "renameSelectsExistingName" : true,
-  //     "reorderOnNotification" : true,
-  //     "sendAnonymousTelemetry" : true,
-  //     "warnBeforeQuit" : true
-  //   },
+  "app" : {
+    "reorderOnNotification" : false
+  },
 
-  //   "notifications" : {
-  //     "command" : "",
-  //     "customSoundFilePath" : "",
-  //     "dockBadge" : true,
-  //     "paneFlash" : true,
-  //     "showInMenuBar" : true,
-  //     "sound" : "default",
-  //     "unreadPaneRing" : true
-  //   },
+  "notifications" : {
+    "command" : "",
+    "customSoundFilePath" : "",
+    "dockBadge" : true,
+    "paneFlash" : true,
+    "showInMenuBar" : true,
+    "sound" : "Blow",
+    "unreadPaneRing" : true
+  },
 
   //   "sidebar" : {
   //     "branchLayout" : "vertical",
@@ -92,7 +80,7 @@
 
   //   "customCommands" : {
   //     "trustedDirectories" : [
-  // 
+  //
   //     ]
   //   },
 
