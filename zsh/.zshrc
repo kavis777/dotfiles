@@ -65,7 +65,7 @@ alias vim="nvim"
 alias view="nvim -R"
 
 
-. "$HOME/.local/bin/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
 # cmux wrapper（claude等）をhomebrew版より優先させる
 if [ -d "/Applications/cmux.app/Contents/Resources/bin" ]; then
