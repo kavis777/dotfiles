@@ -5,7 +5,6 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "claude-opus-4-8",
   "hooks": {
     "PreToolUse": [
       {
@@ -32,7 +31,8 @@
       }
     ]
   },
+  "tui": "fullscreen",
   "theme": "dark",
   "skipAutoPermissionPrompt": true,
-  "tui": "fullscreen"
+  "model": "claude-fable-5[1m]"
 }
