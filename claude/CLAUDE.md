@@ -13,6 +13,12 @@
 - 保存前に ~/ai-memory/memory/feedback/ の既存ファイルを確認し、同趣旨なら pain_count を +1
 - pain_count >= 3 のフィードバックは ~/ai-memory/rules/ に昇格させること
 
+## 個人プロフィール
+
+- 会話開始時に ~/ai-memory/memory/profile/profile_core.md を読み、回答をパーソナライズする前提として使うこと
+- 家族・住まい・信仰・価値観に関わる相談では、profile/ 配下の詳細ファイルもオンデマンドで参照する
+- 価値観の詳細（真実の源）は ~/obsidian/vault/20 Atomic/ にある。profile側に価値観を重複して書かない
+
 ## YouTrack コマンド
 
 - YouTrackの「コマンドを適用」ダイアログでは、UIが日本語でも**英語のフィールド名・キーワード**を使う
