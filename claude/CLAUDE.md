@@ -18,6 +18,8 @@
 - 会話開始時に ~/ai-memory/memory/profile/profile_core.md を読み、回答をパーソナライズする前提として使うこと
 - 家族・住まい・信仰・価値観に関わる相談では、profile/ 配下の詳細ファイルもオンデマンドで参照する
 - 価値観の詳細（真実の源）は ~/obsidian/vault/20 Atomic/ にある。profile側に価値観を重複して書かない
+- 調べごと・判断の相談では ~/obsidian/vault/50 Records/出来事ログ/ のファイル名一覧を確認し、関連ノートがあればオンデマンドで読む（セッション終了時の自動抽出で蓄積される。特に重要な調査・判断はその場で /log-research）
+- ~/ai-memory/memory/profile/_attribute_candidates.md に未反映の属性候補があれば会話の冒頭で知らせ、「反映して」と言われたら vault エンティティ → profile_core.md の順に同期し、反映済みの行を削除する
 
 ## YouTrack コマンド
 
