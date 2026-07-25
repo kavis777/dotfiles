@@ -26,6 +26,11 @@
             "type": "command",
             "command": "bash ~/ai-memory/hooks/prompt-rule-reminder.sh",
             "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash ~/ai-memory/hooks/prompt-save-routing.sh",
+            "timeout": 5
           }
         ]
       }
@@ -53,10 +58,33 @@
           }
         ]
       }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/dotfiles/claude/hooks/notify-ntfy.sh",
+            "timeout": 8
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/dotfiles/claude/hooks/notify-ntfy.sh",
+            "timeout": 8
+          }
+        ]
+      }
     ]
   },
   "tui": "fullscreen",
   "theme": "dark",
-  "skipAutoPermissionPrompt": true,
-  "model": "claude-fable-5[1m]"
+  "skipAutoPermissionPrompt": true
 }
