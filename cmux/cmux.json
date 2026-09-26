@@ -61,13 +61,13 @@
   //     "selectionColor" : null
   //   },
 
-  //   "sidebarAppearance" : {
-  //     "darkModeTintColor" : null,
-  //     "lightModeTintColor" : null,
-  //     "matchTerminalBackground" : false,
-  //     "tintColor" : "#000000",
-  //     "tintOpacity" : 0.17999999999999999
-  //   },
+  "sidebarAppearance" : {
+    "darkModeTintColor" : null,
+    "lightModeTintColor" : null,
+    "matchTerminalBackground" : true,
+    "tintColor" : "#000000",
+    "tintOpacity" : 0.18
+  },
 
   //   "automation" : {
   //     "claudeBinaryPath" : "",
