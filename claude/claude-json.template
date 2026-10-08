@@ -1,0 +1,74 @@
+{
+  "_comment": [
+    "~/.claude.json の mcpServers だけを補完するためのテンプレート。",
+    "~/.claude.json 本体は machineID / projects / 各種キャッシュなどローカル状態を含むため",
+    "シンボリックリンクにはせず、config_setup.sh が mcpServers のみをマージする。",
+    "既存の定義があればそちらが優先され、このテンプレートで上書きされることはない。",
+    "<...> のプレースホルダは setup_secrets.sh が Bitwarden の値で置き換える。",
+    "__HOME__ は config_setup.sh がホームディレクトリに置換する。"
+  ],
+  "mcpServers": {
+    "todoist": {
+      "type": "http",
+      "url": "https://ai.todoist.net/mcp"
+    },
+    "figma": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp"
+    },
+    "YouTrack": {
+      "type": "http",
+      "url": "https://lcl-bus.myjetbrains.com/mcp",
+      "headers": {
+        "Authorization": "<YouTrack Permanent Token (Bearer perm-... 形式)>"
+      }
+    },
+    "youtrack-agile": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["__HOME__/projects/youtrack-agile-mcp/index.mjs"],
+      "env": {
+        "YOUTRACK_BASE_URL": "https://lcl-bus.myjetbrains.com/youtrack"
+      }
+    },
+    "kibela": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm", "--platform", "linux/amd64",
+        "-e", "KIBELA_ORIGIN",
+        "-e", "KIBELA_ACCESS_TOKEN",
+        "ghcr.io/kibela/kibela-mcp-server"
+      ],
+      "env": {
+        "KIBELA_ORIGIN": "https://lclco.kibe.la",
+        "KIBELA_ACCESS_TOKEN": "<Kibela Personal Access Token>"
+      }
+    },
+    "slack": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "<Slack Bot User OAuth Token>",
+        "SLACK_TEAM_ID": "T0K9M4E0Z"
+      }
+    },
+    "bugsnag": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "bugsnag-mcp-server"],
+      "env": {
+        "BUGSNAG_API_KEY": "<Bugsnag Personal Auth Token>"
+      }
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "env": {
+        "ASDF_NODEJS_VERSION": "22.22.0"
+      }
+    }
+  }
+}

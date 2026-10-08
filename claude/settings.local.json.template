@@ -26,5 +26,8 @@
         "KIBELA_ACCESS_TOKEN": "<Kibela Personal Access Token>"
       }
     }
+  },
+  "env": {
+    "FIGMA_TOKEN": "<Figma Personal Access Token>"
   }
 }
