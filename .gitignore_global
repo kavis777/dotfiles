@@ -9,3 +9,5 @@ frontend/node_modules
 next-env.d.ts
 .claude
 service-account.json
+
+**/.claude/settings.local.json
