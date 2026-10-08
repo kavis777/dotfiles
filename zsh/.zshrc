@@ -71,3 +71,10 @@ alias view="nvim -R"
 if [ -d "/Applications/cmux.app/Contents/Resources/bin" ]; then
   export PATH="/Applications/cmux.app/Contents/Resources/bin:$PATH"
 fi
+
+# dotfiles の自作スクリプト
+export PATH="$HOME/dotfiles/scripts:$PATH"
+
+# 勤怠（Slack連絡 + ジョブカン打刻）
+alias kin="jobcan --time 1730"
+alias kin2="jobcan --time 1800"

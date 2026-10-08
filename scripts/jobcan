@@ -1,0 +1,2 @@
+#!/bin/bash
+exec node /Users/kawabe/dotfiles/scripts/jobcan-cli/jobcan.mjs "$@"
