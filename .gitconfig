@@ -28,9 +28,16 @@
 [pull]
 	ff = only
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+; GitHub は gh の認証を使い回す。config_setup.sh が ~/.gitconfig をこのファイルへ
+; 貼り替えるため gh auth setup-git の設定が消える。ここに持たせておくことで
+; 新マシンでも private repo の clone が gh 認証だけで通る
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !gh auth git-credential
 [push]
 	default = current
