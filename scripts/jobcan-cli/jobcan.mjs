@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 // Slack の勤怠連絡とジョブカンの打刻をまとめて行う CLI。
-//   jobcan                         出勤: Slack 投稿 + 出勤打刻（既定 --time 1730 --place remote）
-//   jobcan --time 1800             退勤予定を 18:00 にして出勤
-//   jobcan --place office          出社として出勤
+//   jobcan in                      出勤: Slack 投稿 + 出勤打刻（既定 --time 1730 --place remote）
+//   jobcan                         in の省略形。kin / kin2 はこれを使う
+//   jobcan in --time 1800          退勤予定を 18:00 にして出勤
+//   jobcan in --place office       出社として出勤
 //   jobcan arrived                 「出社しました。業務開始します。」+ 出勤打刻
 //   jobcan lunch / back            昼休憩の連絡（ジョブカン側に休憩打刻が無いため投稿のみ）
-//   jobcan bye                     「お先に失礼します」+ 退勤打刻
+//   jobcan out                     「お先に失礼します」+ 退勤打刻
 //   jobcan login                   ブラウザを開いて手動ログインし、セッションを保存
 //   jobcan inspect                 マイページの打刻UIと勤務状態を表示（打刻はしない）
 //   jobcan whoami                  Slack トークンの素性を表示
@@ -51,7 +52,7 @@ const PLACE_LABEL = { remote: '在宅', office: '出社' };
 
 function parseArgs(argv) {
   const opts = {
-    command: 'start',
+    command: 'in', // 引数なしは出勤。kin / kin2 がこの形で呼ぶ
     time: DEFAULT_TIME,
     place: DEFAULT_PLACE,
     dryRun: false,
@@ -107,7 +108,7 @@ function normalizePlace(value) {
 
 function buildMessage(opts) {
   switch (opts.command) {
-    case 'start': {
+    case 'in': {
       const place = PLACE_LABEL[normalizePlace(opts.place)];
       const time = normalizeTime(opts.time);
       return `おはようございます。\n本日は以下の時間で勤務します。\n${place}　~${time}頃`;
@@ -115,7 +116,7 @@ function buildMessage(opts) {
     case 'arrived': return '出社しました。\n業務開始します。';
     case 'lunch': return 'お昼入ります';
     case 'back': return '戻りました';
-    case 'bye': return 'お先に失礼します';
+    case 'out': return 'お先に失礼します';
     default: return null;
   }
 }
@@ -124,7 +125,7 @@ function buildMessage(opts) {
 // lunch / back に打刻が無いのは実装漏れではない。ジョブカンは打刻区分を自動判別し
 // （PUSH は set_value('DEF')、打刻修正画面にも「打刻区分は自動で判別されます」）、
 // 休憩を選ぶ手段が無い。勤務中に打刻すると退勤になるため、休憩は Slack 投稿だけにする。
-const PUNCH_BY_DEFAULT = { start: true, arrived: true, bye: true, lunch: false, back: false };
+const PUNCH_BY_DEFAULT = { in: true, arrived: true, out: true, lunch: false, back: false };
 const PUNCH_UNAVAILABLE = new Set(['lunch', 'back']);
 
 // ---------------------------------------------------------------- slack
@@ -557,11 +558,11 @@ function fail(message) { console.error(`エラー: ${message}`); process.exit(1)
 const HELP = `使い方: jobcan [サブコマンド] [オプション]
 
 サブコマンド
-  (なし)     出勤連絡 + 出勤打刻
+  in         出勤連絡 + 出勤打刻（引数なしでも同じ。kin / kin2 はこれ）
+  out        「お先に失礼します」+ 退勤打刻
   arrived    「出社しました。業務開始します。」+ 出勤打刻
   lunch      「お昼入ります」（投稿のみ。ジョブカンに休憩打刻は無い）
   back       「戻りました」（投稿のみ）
-  bye        「お先に失礼します」+ 退勤打刻
   login      ブラウザを開いて手動ログインし、セッションを保存
   inspect    マイページの打刻UIと現在の勤務状態を表示（打刻しない）
   whoami     Slack トークンの素性を表示（本人名義で投稿されるかの確認）
@@ -596,7 +597,7 @@ async function main() {
   const message = buildMessage(opts);
   if (message === null) fail(`不明なサブコマンド: ${opts.command}`);
 
-  const punchKind = opts.command === 'bye' ? 'out' : 'in';
+  const punchKind = opts.command === 'out' ? 'out' : 'in';
   const shouldPunch = opts.punch === null ? PUNCH_BY_DEFAULT[opts.command] : opts.punch;
 
   if (shouldPunch && PUNCH_UNAVAILABLE.has(opts.command)) {
