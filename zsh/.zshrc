@@ -65,7 +65,8 @@ alias vim="nvim"
 alias view="nvim -R"
 
 
-[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+# uv 等が入る ~/.local/bin（uv インストーラの env は作らせない運用のため直接通す）
+export PATH="$HOME/.local/bin:$PATH"
 
 # cmux wrapper（claude等）をhomebrew版より優先させる
 if [ -d "/Applications/cmux.app/Contents/Resources/bin" ]; then
