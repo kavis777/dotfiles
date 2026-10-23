@@ -2,6 +2,9 @@
   "sentences": {
     "Sending the dropped file to the terminal…": {
       "ja": "ドロップされたファイルをターミナルに送信しています…"
+    },
+    "This session has ended — what you sent didn't reach the terminal.": {
+      "ja": "このセッションは終了しています — 送信した内容はターミナルに届いていません。"
     }
   }
 }
