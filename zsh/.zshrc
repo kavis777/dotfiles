@@ -85,3 +85,8 @@ alias mt-restart='launchctl kickstart -k gui/$(id -u)/com.mulmoterminal'
 alias mt-stop='launchctl bootout gui/$(id -u)/com.mulmoterminal'
 alias mt-start='launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.mulmoterminal.plist'
 alias mt-log='tail -f ~/Library/Logs/mulmoterminal.log'
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/kawabe/.docker/completions $fpath)
+autoload -Uz compinit
+(( ${+_comps[docker]} )) || compinit
+# End of Docker CLI completions
