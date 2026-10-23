@@ -7,6 +7,10 @@ export LANG=ja_JP.UTF-8
 # デフォルトエディタ
 export EDITOR=nvim
 
+# キーマップはemacsに固定（EDITORにviを含む環境を継承して起動するとzshがviモードになり、
+# Ctrl+Fでautosuggestionを確定できず^Fがそのまま入力されるため。例: MulmoTerminal）
+bindkey -e
+
 # コマンド履歴の設定
 export HISTSIZE=1000000
 export SAVEHIST=1000000
