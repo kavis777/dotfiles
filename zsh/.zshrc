@@ -79,3 +79,9 @@ export PATH="$HOME/dotfiles/scripts:$PATH"
 # 勤怠（Slack連絡 + ジョブカン打刻）
 alias kin="jobcan --time 1730"
 alias kin2="jobcan --time 1800"
+
+# MulmoTerminal（LaunchAgent: launchagents/common/com.mulmoterminal.plist）
+alias mt-restart='launchctl kickstart -k gui/$(id -u)/com.mulmoterminal'
+alias mt-stop='launchctl bootout gui/$(id -u)/com.mulmoterminal'
+alias mt-start='launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.mulmoterminal.plist'
+alias mt-log='tail -f ~/Library/Logs/mulmoterminal.log'

@@ -1,0 +1,3 @@
+#!/bin/zsh -l
+# LaunchAgent (com.mulmoterminal) から起動する。ログイン項目にはこのファイル名が表示される
+exec npx -y mulmoterminal@latest
