@@ -40,6 +40,13 @@
 - 複数コマンド同時実行はスペース区切り（例: `for me priority critical`）
 - 詳細は ~/ai-memory/memory/ の YouTrack リファレンスを参照
 
+## 今日の TODO（線表の「今日」シート）
+
+- /times の朝会で決めた今日の作業は、線表のスプレッドシートの「今日」シートに1行1件で並んでいる（`python3 ~/.claude/skills/times/today.py read` で今日の行を読める）
+- 作業を終えたら、その場で `python3 ~/.claude/skills/times/today.py done <課題ID|順> [メモ]` を呼んで該当の行を完了にする。終わりの判定は行の「完了の条件」で行い、メモには PR 番号など後から辿れる手がかりを書く
+- 同じ課題の行が複数あって候補が出たら、どの行の作業だったかを読んで順で指定し直す。今日の行に無い作業を片付けたら `today.py add` で時間帯「割り込み」の行として足してから done する
+- 課題の State はこのシートに書かない（YouTrack が正）。シートへの書き込みは承認不要（自分のシートで、可逆）
+
 ## dotfiles 管理
 
 - dotfiles（~/dotfiles）にシンボリックリンクを新規作成・変更・削除する際は、~/dotfiles/links.conf も必ず同時に更新する
