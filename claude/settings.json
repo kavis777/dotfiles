@@ -85,6 +85,18 @@
           }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/dotfiles/claude/hooks/pr-full-review.py",
+            "timeout": 20
+          }
+        ]
+      }
     ]
   },
   "extraKnownMarketplaces": {
