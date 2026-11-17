@@ -49,6 +49,11 @@
 - 課題の State はこのシートに書かない（YouTrack が正）。シートへの書き込みは承認不要（自分のシートで、可逆）
 - その週の課題（今週ボードの P1・P2・W1〜W3）は同じスプレッドシートの「今週」タブに並んでいる（朝会で `today.py week` がボードから作り直す）。P の課題には予定日（今週の中だけ。月〜木が基本で、入りきらなければ金曜）、W の課題には「進める条件」がある。課題を片付けて次にやることが決まったら `today.py week-set <課題ID> 次の一手 <内容>` で、待ちに入ったら `進める条件` を書いておく
 
+## 比較・確認用の HTML
+
+- 比較・確認用の HTML（Figma と QA の比較、仕様の差分の説明、確認資料など）は scratchpad に作らず、最初から ~/projects/kawabe-reports の中に作る。作り始める前に /publish-report スキルを読み、`publish.py start` で切った worktree の `reports/<案件>/<課題ID>-<内容>.html` に書く
+- 書き終えたら `publish.py submit` で PR まで出し、PR と手元で開くコマンドを伝える。マージは川辺さんの OK の後
+
 ## dotfiles 管理
 
 - dotfiles（~/dotfiles）にシンボリックリンクを新規作成・変更・削除する際は、~/dotfiles/links.conf も必ず同時に更新する
