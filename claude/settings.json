@@ -87,6 +87,14 @@
       }
     ]
   },
+  "extraKnownMarketplaces": {
+    "frontend-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "lcl-bus/frontend-plugins"
+      }
+    }
+  },
   "tui": "fullscreen",
   "theme": "dark",
   "skipAutoPermissionPrompt": true,
@@ -95,5 +103,8 @@
       "$defaults",
       "Allow redeploying the user's OWN Apps Script web app via `npx @google/clasp deploy` in the personal Shadowverse deck-tracker project dir (/Users/yusuke/projects/sv-match-log-s9). The user explicitly approved this token-gated /exec endpoint for automated spreadsheet rebuilds; treat clasp deploy for this project as approved, not an unexpected public exposure."
     ]
+  },
+  "enabledPlugins": {
+    "frontend@frontend-plugins": true
   }
 }
