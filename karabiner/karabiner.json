@@ -53,7 +53,7 @@
             ]
           },
           {
-            "description": "左⌥だけ＋Raycastのキー（A S D F C Q）をHyper（⌘⌃⌥⇧）＋同じキーに変える（Secure Input 対策）",
+            "description": "左⌥だけ＋Raycastのキー（A F C Q）をHyper（⌘⌃⌥⇧）＋同じキーに変える（Secure Input 対策）。S（Chrome）・D（MulmoTerminal）は Raycast の「手前なら隠す」が Chrome アプリと取り違えるので toggle-app.js で開く・隠す",
             "manipulators": [
               {
                 "type": "basic",
@@ -89,13 +89,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "s",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "shell_command": "/usr/bin/osascript -l JavaScript ~/.config/karabiner/toggle-app.js com.google.Chrome"
                   }
                 ]
               },
@@ -111,13 +105,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "d",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "shell_command": "/usr/bin/osascript -l JavaScript ~/.config/karabiner/toggle-app.js com.google.Chrome.app.chamddmckacbobhanpgpcapfpoodhbjp"
                   }
                 ]
               },
