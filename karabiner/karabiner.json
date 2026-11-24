@@ -53,7 +53,7 @@
             ]
           },
           {
-            "description": "左⌥だけ＋Raycastのキー（A F C Q）をHyper（⌘⌃⌥⇧）＋同じキーに変える（Secure Input 対策）。S（Chrome）・D（MulmoTerminal）は Raycast の「手前なら隠す」が Chrome アプリと取り違えるので toggle-app.js で開く・隠す",
+            "description": "左⌥だけ＋A/S/D/F/C/Q でアプリを開く・隠す（toggle-app.js。一番上のウィンドウで判定）: A VS Code・S Chrome・D MulmoTerminal・F Figma・C ChatGPT・Q Obsidian",
             "manipulators": [
               {
                 "type": "basic",
@@ -67,13 +67,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "a",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "shell_command": "/usr/bin/osascript -l JavaScript ~/.config/karabiner/toggle-app.js com.microsoft.VSCode"
                   }
                 ]
               },
@@ -121,13 +115,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "f",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "shell_command": "/usr/bin/osascript -l JavaScript ~/.config/karabiner/toggle-app.js com.figma.Desktop"
                   }
                 ]
               },
@@ -143,13 +131,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "c",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "shell_command": "/usr/bin/osascript -l JavaScript ~/.config/karabiner/toggle-app.js com.openai.codex"
                   }
                 ]
               },
@@ -165,13 +147,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "q",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "shell_command": "/usr/bin/osascript -l JavaScript ~/.config/karabiner/toggle-app.js md.obsidian"
                   }
                 ]
               }
