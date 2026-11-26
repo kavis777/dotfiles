@@ -13,7 +13,7 @@
 - feedbackメモリを書く前に ~/ai-memory/evolution.md のプロトコルに従うこと
 - 昇格ルールも同ファイルに記載
 - 昇格済みルールは ~/ai-memory/rules/ を参照
-- 会話開始時に ~/ai-memory/rules/feedback/ と ~/ai-memory/rules/user/ 配下の全ファイルを読み、内容に従うこと
+- ~/ai-memory/rules/feedback/ と ~/ai-memory/rules/user/ の全ルールは、SessionStart フックで `<ai-memory-rules>` としてセッション冒頭に自動注入される。内容に従うこと（注入が見当たらない環境では、会話開始時に両ディレクトリの全ファイルを読む）
 - 強制ルールは Claude Code では `<ai-memory-enforced-rules>` として毎プロンプト自動注入される。注入が見当たらない環境（Codex 等）では、会話開始時に `bash ~/ai-memory/hooks/prompt-rule-reminder.sh` を実行し、出力されたルールを会話全体に適用すること
 - あわせて会話開始時に、現在の作業ディレクトリ名（basename）に対応するプロジェクトメモリ索引 ~/ai-memory/memory/projects/<作業ディレクトリ名>/MEMORY.md を読むこと（存在すれば）。この索引は1行要約のポインタ集なので、タスクに関連しそうな項目があれば該当メモリ本体を読んでから着手する（例: デプロイ・反映・ワークフロー手順は git 履歴を調べる前にまず索引を確認する）
 

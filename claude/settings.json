@@ -46,6 +46,16 @@
             "type": "command",
             "command": "bash ~/ai-memory/hooks/session-start-inject-profile.sh",
             "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash ~/ai-memory/hooks/session-start-inject-rules.sh feedback",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash ~/ai-memory/hooks/session-start-inject-rules.sh user",
+            "timeout": 5
           }
         ]
       }
